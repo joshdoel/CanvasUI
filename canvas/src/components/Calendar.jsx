@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Checkbox from '@mui/material/Checkbox';
 import Confetti from 'react-confetti';
+import ChatBoxButton from './ChatBoxButton';
 
 const Calendar = () => {
   const [selectedDate, setSelectedDate] = useState(new Date());
@@ -71,6 +72,12 @@ const Calendar = () => {
 
   const handleToDoListToggle = () => {
     setShowToDoList(!showToDoList);
+
+    // Remove checked items when closing the to-do list
+    if (!showToDoList && isChecked) {
+      setToDoItems((prevItems) => prevItems.filter((item) => !item.completed));
+      setIsChecked(false);
+    }
   };
 
   const handleAddToDo = () => {
@@ -113,7 +120,6 @@ const Calendar = () => {
     });
   };
 
-
   return (
     <div className="calendar">
       {confetti && <Confetti />} {/* Confetti effect */}
@@ -131,7 +137,7 @@ const Calendar = () => {
         ))}
       </div>
       {renderCalendar()}
-       <button className="todo-list-button" onClick={handleToDoListToggle}>
+      <button className="todo-list-button" onClick={handleToDoListToggle}>
         📝 To-Do
       </button>
       {showToDoList && (
