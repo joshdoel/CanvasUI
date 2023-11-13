@@ -9,6 +9,7 @@ import ClassSelection from './components/ClassSelection';
 import ChatBoxButton from './components/ChatBoxButton';
 import ZoomPage from './components/ZoomPage';
 import Syllabus from './components/Syllabus';
+import Assignments from './components/Assignments';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('classSelection');
@@ -32,6 +33,8 @@ function App() {
         return <ZoomPage />;
       case 'Math/Syllabus':
         return <Syllabus />;
+      case 'Math/Assignments':
+        return <Assignments />;
       default:
         return null;
     }

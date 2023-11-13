@@ -16,6 +16,9 @@ body, html {
   width: 200px;
   padding: 20px;
   height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 .sidebar ul {
@@ -39,6 +42,7 @@ body, html {
   padding: 20px;
   flex-grow: 1;
   overflow-y: auto;
+  padding-left: 240px;
 }
 
 .class-selection {
