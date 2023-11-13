@@ -55,12 +55,17 @@ content {
 }
 
 .calendar {
-  background-color: #fff;
+  background-color: #b8d8d8;
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   height: 100vh;
   width: 170vh;
+}
+
+.calendar-title {
+  font-family: 'Arial', sans-serif; /* Use a professional font, replace with your desired font */
+  margin-top: 20px; /* Add margin for spacing */
 }
 
 .calendar-header {
@@ -84,7 +89,7 @@ content {
   height: 120px; /* Increased height */
   width: 120px; /* Increased width */
   border-radius: 5px;
-  background-color: #eee;
+  background-color: #555;
   cursor: pointer;
 }
 
@@ -110,13 +115,14 @@ content {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 1vh;
   height: 40px; /* Increased height */
   font-weight: bold;
-  background-color: #f0f0f0;
+  background-color: #555;
 }
 
 .todo-list-button {
-  background-color: #fff;
+  background-color: #555;
   border: 1px solid #ccc;
   padding: 10px;
   margin: 10px;
@@ -172,7 +178,7 @@ li {
   position: fixed;
   bottom: 90px; /* Adjust as needed to avoid overlapping the button */
   right: 90px;
-  background-color: rgb(241, 209, 209);
+  background-color: #eef5d8;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 250px;
   border-radius: 5px;
@@ -200,7 +206,7 @@ li {
   top: 10px;
   right: 10px;
   padding: 10px;
-  background-color: #fff;
+  background-color: #555;
   border: 1px solid #007bff;
   border-radius: 5px;
 }
@@ -210,7 +216,7 @@ li {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #eee;
+  background-color: #555;
   padding: 10px;
   display: flex;
   align-items: center;
@@ -242,7 +248,7 @@ li {
   bottom: 300px;
   right: 300px;
   transform: translate(-50%, -50%);
-  background-color: #fff;
+  background-color: #555;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
   border-radius: 5px;

@@ -123,7 +123,7 @@ const Calendar = () => {
   return (
     <div className="calendar">
       {confetti && <Confetti />} {/* Confetti effect */}
-      <h1>Calendar Page</h1>
+      <h1 className = "calendar-title">Calendar Page</h1>
       <div className="calendar-header">
         <button onClick={() => handleMonthChange(-1)}>Previous Month</button>
         <span>{`${selectedDate.toLocaleString('default', { month: 'long' })} ${selectedDate.getFullYear()}`}</span>
