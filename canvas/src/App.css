@@ -3,7 +3,6 @@ body, html {
   padding: 0;
   font-family: 'Arial', sans-serif;
   height: 100%;
-
 }
 
 .app {
@@ -16,7 +15,7 @@ body, html {
   color: #fff;
   width: 200px;
   padding: 20px;
-  height: 100vh; /* Set height to 100% of the viewport height */
+  height: 100vh;
 }
 
 .sidebar ul {
@@ -36,10 +35,10 @@ body, html {
   background-color: #555;
 }
 
-content {
+.content {
   padding: 20px;
   flex-grow: 1;
-  overflow-y: auto; /* Add this to enable scrolling if the content overflows */
+  overflow-y: auto;
 }
 
 .class-selection {
