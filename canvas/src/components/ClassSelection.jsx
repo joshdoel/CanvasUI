@@ -1,0 +1,32 @@
+import React from 'react';
+
+const classes = [
+  { id: 1, name: 'Math', description: 'Learn all about numbers and equations.' },
+  { id: 2, name: 'Science', description: 'Explore the wonders of the natural world.' },
+  { id: 3, name: 'History', description: 'Discover the events that shaped our world.' },
+  { id: 4, name: 'English', description: 'Improve your language and literature skills.' },
+];
+
+const ClassCard = ({ classData, onCardClick }) => {
+  return (
+    <div className="class-card" onClick={() => onCardClick(classData.id)}>
+      <h3>{classData.name}</h3>
+      <p>{classData.description}</p>
+    </div>
+  );
+};
+
+const ClassSelection = ({ onClassSelect }) => {
+  return (
+    <div className="class-selection">
+      <h1>Class Selection</h1>
+      <div className="class-cards">
+        {classes.map((classData) => (
+          <ClassCard key={classData.id} classData={classData} onCardClick={onClassSelect} />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default ClassSelection;
