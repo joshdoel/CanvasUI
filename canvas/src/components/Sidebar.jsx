@@ -6,10 +6,8 @@ const Sidebar = ({ onPageChange }) => {
     <nav className="sidebar">
       <ul>
         <li onClick={() => onPageChange('classSelection')}>Class Selection</li>
-        <li onClick={() => onPageChange('dashboard')}>Dashboard</li>
         <li onClick={() => onPageChange('grades')}>Grades</li>
         <li onClick={() => onPageChange('calendar')}>Calendar</li>
-        <li onClick={() => onPageChange('settings')}>Settings</li>
       </ul>
     </nav>
   );
