@@ -1,19 +1,33 @@
 // Assignments.jsx
-import React from 'react';
+import React, { useState } from 'react';
 import './Assignments.css';
+import MazePopup from './MazePopup'; // Adjust the path as needed
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDown, faCheck  } from '@fortawesome/free-solid-svg-icons';
 
 const Assignments = () => {
-    const handleDownload = (itemName) => {
-        // Implement the logic for downloading the item
-        console.log(`Downloading ${itemName}`);
-    };
+    
+    const [showMazePopup, setShowMazePopup] = useState(false);
+
+    const handleDownload = () => {
+        // Show the maze popup
+        setShowMazePopup(true);
+      };
+
+    const handleCloseMazePopup = () => {
+        // Close the maze popup
+        setShowMazePopup(false);
+      };
 
     const handleSubmit = (itemName) => {
         // Implement the logic for submitting the item
         console.log(`Submitting ${itemName}`);
     };
+
+    const handleMazeSolve = () => {
+        // Logic to handle what happens after solving the maze
+        console.log('Maze solved!');
+      };
 
 
     return (
@@ -72,6 +86,9 @@ const Assignments = () => {
                     </li>
                 </ul>
             </div>
+            {showMazePopup && (
+                <MazePopup onClose={handleCloseMazePopup} onSolve={handleMazeSolve} />
+            )}
         </div>
     );
 };
