@@ -1,10 +1,14 @@
 /* Modules.css */
 .modules-container {
-    margin-top: 5px;
     display: flex;
     flex-direction: column; /* Stack modules vertically */
     position: absolute;
     top: 0px;
+    background-color: #141b2d;
+    height: 105vh;
+    width: 175vh;
+    color: #ccc;
+    border: 1px solid #ccc;
   }
   
   .module {
@@ -12,6 +16,7 @@
     display: flex;
     flex-direction: column; /* Stack text elements in each module vertically */
     align-items: flex-start; /* Align text at the top */
+    color: #ccc;
   }
   
   /* Add more styles as needed */

@@ -9,3 +9,17 @@
     margin: 10px;
     cursor: pointer;
   }
+
+  .monthButton {
+    background-color: #1f2941;
+    color: #ccc;
+    border: 1px solid #ccc;
+  }
+
+  .calendar-title{
+    color: #ccc;
+  }
+
+  .month{
+    color: #ccc;
+  }
