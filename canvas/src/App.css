@@ -332,8 +332,8 @@ li {
   width: calc(15% - 20px); /* Adjust the width based on the number of cards you want in a row */
   margin-top: 20px;
   margin-bottom: 20px;
-  margin-left: 30px;
-  margin-right: 90px;
+  margin-left: 40px;
+  margin-right: 30px;
   border: 1px solid #ccc;
 }
 
@@ -353,3 +353,4 @@ li {
 .dropdown-list {
   margin-left: 10px;
 }
+

@@ -15,6 +15,10 @@ const Sidebar = ({ onPageChange }) => {
       window.open('https://zoom.us/', '_blank');
     } else {
       onPageChange(subpage);
+      setMathDropdownOpen(false);
+      setScienceDropdownOpen(false);
+      setSocialStudiesDropdownOpen(false);
+      setEnglishDropdownOpen(false);
     }
   };
 

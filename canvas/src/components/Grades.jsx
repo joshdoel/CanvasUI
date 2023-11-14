@@ -3,7 +3,7 @@ import React from 'react';
 const Grades = () => {
   const classes = [
     {
-      className: 'Math',
+      className: 'Math Grade',
       assignments: [
         { name: 'Project 1', type: 'project', grade: 90 },
         { name: 'Exam 1', type: 'exam', grade: 80 },
@@ -14,7 +14,7 @@ const Grades = () => {
       ],
     },
     {
-        className: 'Science',
+        className: 'Science Grade',
         assignments: [
           { name: 'Project 1', type: 'project', grade: 56 },
           { name: 'Exam 1', type: 'exam', grade: 80 },
@@ -26,7 +26,7 @@ const Grades = () => {
         ],
       },
       {
-        className: 'History',
+        className: 'History Grade',
         assignments: [
           { name: 'Project 1', type: 'project', grade: 90 },
           { name: 'Exam 1', type: 'exam', grade: 80 },
@@ -43,7 +43,7 @@ const Grades = () => {
         ],
       },
       {
-        className: 'English',
+        className: 'English Grade',
         assignments: [
           { name: 'Project 1', type: 'project', grade: 90 },
           { name: 'Exam 1', type: 'exam', grade: 80 },
