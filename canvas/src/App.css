@@ -11,7 +11,7 @@ body, html {
 }
 
 .sidebar {
-  background-color: #333;
+  background-color: #1f2941;
   color: #fff;
   width: 200px;
   padding: 20px;
@@ -58,7 +58,7 @@ body, html {
 }
 
 .calendar {
-  background-color: #b8d8d8;
+  background-color: #141b2d;
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -92,7 +92,7 @@ body, html {
   height: 120px; /* Increased height */
   width: 120px; /* Increased width */
   border-radius: 5px;
-  background-color: #555;
+  background-color: #1f2941;
   cursor: pointer;
 }
 
@@ -121,7 +121,7 @@ body, html {
   margin-bottom: 1vh;
   height: 40px; /* Increased height */
   font-weight: bold;
-  background-color: #555;
+  background-color: #1f2941;
 }
 
 .todo-list-button {
