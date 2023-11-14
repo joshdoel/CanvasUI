@@ -11,8 +11,8 @@ const ConfirmationPopup = ({ onConfirm, onCancel }) => {
     <div className="confirmation-popup">
       <h2>Did you enjoy the assignment?</h2>
       <div className="button-container">
-        <button onClick={onConfirm}>Yes</button>
-        <button onClick={handleNoClick}>No</button>
+        <button className="yes-button" onClick={onConfirm}>Yes</button>
+        <button className="yes-button" onClick={handleNoClick}>No</button>
       </div>
     </div>
   );
