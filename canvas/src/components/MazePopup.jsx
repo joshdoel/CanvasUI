@@ -19,6 +19,8 @@ const MazePopup = ({ onClose, onSolve }) => {
 
     // Draw maze lines
     ctx.beginPath();
+    ctx.strokeStyle = 'red';
+    ctx.lineWidth = 2;
     ctx.moveTo(50, 0);
     ctx.lineTo(50, 150);
     ctx.stroke();
