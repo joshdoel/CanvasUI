@@ -6,6 +6,7 @@ import './App.css'; // Import the styles
 import Sidebar from './components/Sidebar';
 import Calendar from './components/Calendar';
 import ClassSelection from './components/ClassSelection';
+import Grades from './components/Grades'; 
 import ChatBoxButton from './components/ChatBoxButton';
 import ZoomPage from './components/ZoomPage';
 import Syllabus from './components/Syllabus';
@@ -30,6 +31,8 @@ function App() {
         return <ClassSelection />;
       case 'calendar':
         return <Calendar />;
+      case 'grades':
+        return <Grades />
       case 'Math/Zoom':
         return <ZoomPage />;
       case 'Math/Syllabus':

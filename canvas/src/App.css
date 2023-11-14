@@ -11,7 +11,7 @@ body, html {
 }
 
 .sidebar {
-  background-color: #333;
+  background-color: #1f2941;
   color: #fff;
   width: 200px;
   padding: 20px;
@@ -46,7 +46,7 @@ body, html {
 }
 
 .class-selection {
-  background-color: #fff;
+  background-color: rgb(255, 0, 0);
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -58,8 +58,9 @@ body, html {
 }
 
 .calendar {
-  background-color: #b8d8d8;
+  background-color: #141b2d;
   padding: 20px;
+  border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   height: 100vh;
@@ -68,6 +69,7 @@ body, html {
 .calendar-weekday {
   width: 198px;
   column-gap: 100px;
+  border: 1px solid #ccc;
 }
 
 .calendar-title {
@@ -96,8 +98,8 @@ body, html {
   align-items: center;
   height: 120px; /* Increased height */
   width: 200px; /* Increased width */
-  border-radius: 5px;
-  background-color: #555;
+  border: 1px solid #ccc;
+  background-color: #1f2941;
   cursor: pointer;
 }
 
@@ -126,7 +128,7 @@ body, html {
   margin-bottom: 1vh;
   height: 40px; /* Increased height */
   font-weight: bold;
-  background-color: #555;
+  background-color: #1f2941;
 }
 
 .overlay {
@@ -299,4 +301,41 @@ li {
   max-width: 70%;
   word-wrap: break-word;
   align-self: flex-start;
+}
+
+.grades {
+  background-color: #141b2d;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px;
+  height: 100vh;
+  width: 170vh;
+  border: 1px solid #ccc;
+}
+
+.class-card {
+  background-color: #192539;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: calc(15% - 20px); /* Adjust the width based on the number of cards you want in a row */
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 30px;
+  margin-right: 20px;
+  border: 1px solid #ccc;
+}
+
+.class-card h2 {
+  margin-bottom: 10px;
+}
+
+.class-card ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.class-card li {
+  margin-bottom: 10px;
 }
