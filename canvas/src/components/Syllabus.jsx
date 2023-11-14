@@ -1,5 +1,6 @@
 // Syllabus.jsx
 import React from 'react';
+import './Syllabus.css';
 
 const Syllabus = () => {
   return (
