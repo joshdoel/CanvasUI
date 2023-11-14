@@ -2,28 +2,68 @@ import React, { useState } from 'react';
 
 const Sidebar = ({ onPageChange }) => {
   const [isMathDropdownOpen, setMathDropdownOpen] = useState(false);
+  const [isScienceDropdownOpen, setScienceDropdownOpen] = useState(false);
+  const [isSocialStudiesDropdownOpen, setSocialStudiesDropdownOpen] = useState(false);
+  const [isEnglishDropdownOpen, setEnglishDropdownOpen] = useState(false);
 
-  const handleMathClick = () => {
-    setMathDropdownOpen(!isMathDropdownOpen);
+  const handleDropdownClick = (dropdown, setDropdownOpen) => {
+    setDropdownOpen(!dropdown);
   };
 
-  const handleMathItemClick = (subpage) => {
-    onPageChange(`Math/${subpage}`);
+  const handleItemClick = (subpage) => {
+    onPageChange(subpage);
+    // Close all dropdowns
     setMathDropdownOpen(false);
+    setScienceDropdownOpen(false);
+    setSocialStudiesDropdownOpen(false);
+    setEnglishDropdownOpen(false);
   };
 
   return (
     <nav className="sidebar">
       <ul>
-        <li onClick={handleMathClick} className={isMathDropdownOpen ? 'active' : ''}>
+        <li onClick={() => handleDropdownClick(isMathDropdownOpen, setMathDropdownOpen)} className={isMathDropdownOpen ? 'active' : ''}>
           Math
           {isMathDropdownOpen && (
             <ul className="dropdown-list">
-              <li onClick={() => handleMathItemClick('Modules')}>Modules</li>
-              <li onClick={() => handleMathItemClick('Assignments')}>Assignments</li>
-              <li onClick={() => handleMathItemClick('Syllabus')}>Syllabus</li>
-              <li onClick={() => handleMathItemClick('Zoom')}>Zoom</li>
+              <li onClick={() => handleItemClick('Math/Modules')}>Modules</li>
+              <li onClick={() => handleItemClick('Math/Assignments')}>Assignments</li>
+              <li onClick={() => handleItemClick('Math/Syllabus')}>Syllabus</li>
+              <li onClick={() => handleItemClick('Math/Zoom')}>Zoom</li>
               {/* Add more items as needed */}
+            </ul>
+          )}
+        </li>
+        <li onClick={() => handleDropdownClick(isScienceDropdownOpen, setScienceDropdownOpen)} className={isScienceDropdownOpen ? 'active' : ''}>
+          Science
+          {isScienceDropdownOpen && (
+            <ul className="dropdown-list">
+              <li onClick={() => handleItemClick('Math/Modules')}>Modules</li>
+              <li onClick={() => handleItemClick('Math/Assignments')}>Assignments</li>
+              <li onClick={() => handleItemClick('Math/Syllabus')}>Syllabus</li>
+              <li onClick={() => handleItemClick('Math/Zoom')}>Zoom</li>
+            </ul>
+          )}
+        </li>
+        <li onClick={() => handleDropdownClick(isSocialStudiesDropdownOpen, setSocialStudiesDropdownOpen)} className={isSocialStudiesDropdownOpen ? 'active' : ''}>
+          Social Studies
+          {isSocialStudiesDropdownOpen && (
+            <ul className="dropdown-list">
+              <li onClick={() => handleItemClick('Math/Modules')}>Modules</li>
+              <li onClick={() => handleItemClick('Math/Assignments')}>Assignments</li>
+              <li onClick={() => handleItemClick('Math/Syllabus')}>Syllabus</li>
+              <li onClick={() => handleItemClick('Math/Zoom')}>Zoom</li>
+            </ul>
+          )}
+        </li>
+        <li onClick={() => handleDropdownClick(isEnglishDropdownOpen, setEnglishDropdownOpen)} className={isEnglishDropdownOpen ? 'active' : ''}>
+          English
+          {isEnglishDropdownOpen && (
+            <ul className="dropdown-list">
+              <li onClick={() => handleItemClick('Math/Modules')}>Modules</li>
+              <li onClick={() => handleItemClick('Math/Assignments')}>Assignments</li>
+              <li onClick={() => handleItemClick('Math/Syllabus')}>Syllabus</li>
+              <li onClick={() => handleItemClick('Math/Zoom')}>Zoom</li>
             </ul>
           )}
         </li>
