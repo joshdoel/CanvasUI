@@ -11,7 +11,11 @@ const Sidebar = ({ onPageChange }) => {
   };
 
   const handleItemClick = (subpage) => {
-    onPageChange(subpage);
+    if (subpage === 'Math/Zoom') {
+      window.open('https://zoom.us/', '_blank');
+    } else {
+      onPageChange(subpage);
+    }
   };
 
   return (
