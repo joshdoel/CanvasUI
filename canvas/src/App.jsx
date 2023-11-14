@@ -27,8 +27,6 @@ function App() {
 
   const renderPage = () => {
     switch (currentPage) {
-      case 'classSelection':
-        return <ClassSelection />;
       case 'calendar':
         return <Calendar />;
       case 'grades':
@@ -42,7 +40,7 @@ function App() {
         case 'Math/Modules':
           return <Modules />;
       default:
-        return null;
+        return <Calendar />;
     }
   };
 
