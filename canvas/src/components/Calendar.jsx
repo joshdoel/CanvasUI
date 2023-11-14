@@ -169,7 +169,7 @@ const Calendar = () => {
               value={newToDo}
               onChange={(e) => setNewToDo(e.target.value)}
             />
-            <input style={{backgroundColor: '#1f2941'}}
+            <input style={{backgroundColor: '#1f2941', color: '#ccc'}}
               type="text"
               placeholder="Enter due date (optional)"
               value={dueDate}

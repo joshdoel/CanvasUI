@@ -201,7 +201,6 @@ li {
   background-color: #007bff;
   color: #fff;
   background-color: #1f2941;
-  background-color: 
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -352,4 +351,11 @@ li {
 
 .dropdown-list {
   margin-left: 10px;
+}
+
+.subheader {
+  background-color: #141b2d;
+  text-align: center;
+  border: 1px solid #ccc;
+  color: #ccc;
 }
