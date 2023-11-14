@@ -126,9 +126,9 @@ const Calendar = () => {
       {confetti && <Confetti />} {/* Confetti effect */}
       <h1 className = "calendar-title">Calendar</h1>
       <div className="calendar-header">
-        <button onClick={() => handleMonthChange(-1)}>Previous Month</button>
-        <span>{`${selectedDate.toLocaleString('default', { month: 'long' })} ${selectedDate.getFullYear()}`}</span>
-        <button onClick={() => handleMonthChange(1)}>Next Month</button>
+        <button className="monthButton" onClick={() => handleMonthChange(-1)}>Previous Month</button>
+        <span className="month">{`${selectedDate.toLocaleString('default', { month: 'long' })} ${selectedDate.getFullYear()}`}</span>
+        <button className="monthButton" onClick={() => handleMonthChange(1)}>Next Month</button>
       </div>
       <div className="calendar-weekdays">
         {weekdays.map((day, index) => (

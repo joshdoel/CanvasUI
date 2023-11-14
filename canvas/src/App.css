@@ -70,6 +70,7 @@ body, html {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   height: 100vh;
   width: 170vh;
+  color: #ccc;
 }
 .calendar-weekday {
   width: 198px;
@@ -199,6 +200,8 @@ li {
   padding: 10px;
   background-color: #007bff;
   color: #fff;
+  background-color: #1f2941;
+  background-color: 
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -318,6 +321,7 @@ li {
   height: 100vh;
   width: 170vh;
   border: 1px solid #ccc;
+  color: #ccc;
 }
 
 .class-card {

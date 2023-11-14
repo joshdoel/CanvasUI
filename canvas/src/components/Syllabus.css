@@ -1,0 +1,10 @@
+.syllabus{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: flex-start;
+    height: 150vh;
+    width: 180vh;
+    color: #ccc;
+    background-color: #141b2d;
+}
