@@ -4,6 +4,7 @@ import './HappySubmissionPopup.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFileAlt, faSmile } from '@fortawesome/free-solid-svg-icons';
 
+
 const HappySubmissionPopup = ({ onClose }) => {
   const [showSubmitMessage, setShowSubmitMessage] = useState(false);
 
