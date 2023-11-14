@@ -10,6 +10,7 @@ import ChatBoxButton from './components/ChatBoxButton';
 import ZoomPage from './components/ZoomPage';
 import Syllabus from './components/Syllabus';
 import Assignments from './components/Assignments';
+import Modules from './components/Modules';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('classSelection');
@@ -35,6 +36,8 @@ function App() {
         return <Syllabus />;
       case 'Math/Assignments':
         return <Assignments />;
+        case 'Math/Modules':
+          return <Modules />;
       default:
         return null;
     }

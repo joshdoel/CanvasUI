@@ -12,11 +12,6 @@ const Sidebar = ({ onPageChange }) => {
 
   const handleItemClick = (subpage) => {
     onPageChange(subpage);
-    // Close all dropdowns
-    setMathDropdownOpen(false);
-    setScienceDropdownOpen(false);
-    setSocialStudiesDropdownOpen(false);
-    setEnglishDropdownOpen(false);
   };
 
   return (

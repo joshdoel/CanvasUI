@@ -1,0 +1,18 @@
+/* Modules.css */
+.modules-container {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column; /* Stack modules vertically */
+    position: absolute;
+    top: 0px;
+  }
+  
+  .module {
+    margin-bottom: 0px;
+    display: flex;
+    flex-direction: column; /* Stack text elements in each module vertically */
+    align-items: flex-start; /* Align text at the top */
+  }
+  
+  /* Add more styles as needed */
+  
