@@ -1,0 +1,27 @@
+/* SubmissionPopup.css */
+.submission-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    width: 200px; /* Set your desired width */
+    height: 200px; /* Set your desired height */
+  }
+  
+  .icon-container {
+    cursor: move;
+  }
+  
+  .icon {
+    font-size: 48px;
+  }
+  
+  .paper-in-trash {
+    pointer-events: none;
+  }
