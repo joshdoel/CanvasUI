@@ -149,10 +149,11 @@ body, html {
 }
 
 .modal {
-  background: #fff;
+  background: #141b2d;
   padding: 20px;
   border-radius: 5px;
   text-align: center;
+  border: 1px solid #ccc;
 }
 
 li {

@@ -163,20 +163,20 @@ const Calendar = () => {
                 </li>
               ))}
             </ul>
-            <input
+            <input style={{backgroundColor: '#1f2941'}}
               type="text"
               placeholder="Add a new to-do..."
               value={newToDo}
               onChange={(e) => setNewToDo(e.target.value)}
             />
-            <input
+            <input style={{backgroundColor: '#1f2941'}}
               type="text"
               placeholder="Enter due date (optional)"
               value={dueDate}
               onChange={(e) => setDueDate(e.target.value)}
             />
-            <button onClick={handleAddToDo}>Add</button>
-            <button onClick={handleToDoListToggle}>Close</button>
+            <button style={{backgroundColor: '#1f2941'}} onClick={handleAddToDo}>Add</button>
+            <button style={{backgroundColor: '#1f2941'}} onClick={handleToDoListToggle}>Close</button>
           </div>
         </div>
       )}
