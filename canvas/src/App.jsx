@@ -8,6 +8,9 @@ import Calendar from './components/Calendar';
 import ClassSelection from './components/ClassSelection';
 import Grades from './components/Grades'; // Import the Grades component
 import ChatBoxButton from './components/ChatBoxButton';
+import ZoomPage from './components/ZoomPage';
+import Syllabus from './components/Syllabus';
+import Assignments from './components/Assignments';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('classSelection');
@@ -21,13 +24,30 @@ function App() {
     setShowChatBox(!showChatBox);
   };
 
+  const renderPage = () => {
+    switch (currentPage) {
+      case 'classSelection':
+        return <ClassSelection />;
+      case 'calendar':
+        return <Calendar />;
+      case 'grades':
+        return <Grades />
+      case 'Math/Zoom':
+        return <ZoomPage />;
+      case 'Math/Syllabus':
+        return <Syllabus />;
+      case 'Math/Assignments':
+        return <Assignments />;
+      default:
+        return null;
+    }
+  };
+
   return (
     <div className="app">
       <Sidebar onPageChange={handlePageChange} />
       <main className="content">
-        {currentPage === 'classSelection' && <ClassSelection />}
-        {currentPage === 'calendar' && <Calendar />}
-        {currentPage === 'grades' && <Grades />} {/* Add the Grades component */}
+        {renderPage()}
         {showChatBox && <div className="chat-box">{/* Chat box content */}</div>}
         <ChatBoxButton onChatBoxToggle={handleChatBoxToggle} />
       </main>
