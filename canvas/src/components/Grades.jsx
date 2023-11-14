@@ -39,15 +39,6 @@ const Grades = () => {
           { name: 'Quiz 1', type: 'quiz', grade: 'A' },
         ],
       },
-      {
-        className: 'History',
-        assignments: [
-          { name: 'Project 1', type: 'project', grade: 'A' },
-          { name: 'Exam 1', type: 'exam', grade: 'B' },
-          { name: 'Homework 1', type: 'homework', grade: 'C' },
-          { name: 'Quiz 1', type: 'quiz', grade: 'A' },
-        ],
-      },
     ];
 
   return (
