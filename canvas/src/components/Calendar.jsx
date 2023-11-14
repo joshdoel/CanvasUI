@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Checkbox from '@mui/material/Checkbox';
 import Confetti from 'react-confetti';
 import ChatBoxButton from './ChatBoxButton';
+import './Calendar.css';
 
 const Calendar = () => {
   const [selectedDate, setSelectedDate] = useState(new Date());
@@ -123,7 +124,7 @@ const Calendar = () => {
   return (
     <div className="calendar">
       {confetti && <Confetti />} {/* Confetti effect */}
-      <h1 className = "calendar-title">Calendar Page</h1>
+      <h1 className = "calendar-title">Calendar</h1>
       <div className="calendar-header">
         <button onClick={() => handleMonthChange(-1)}>Previous Month</button>
         <span>{`${selectedDate.toLocaleString('default', { month: 'long' })} ${selectedDate.getFullYear()}`}</span>

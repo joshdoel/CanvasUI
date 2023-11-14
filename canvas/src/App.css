@@ -82,6 +82,7 @@ body, html {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 10px; /* Increased gap */
+  padding-left: 90px;
 }
 
 .calendar-day {
@@ -122,15 +123,6 @@ body, html {
   height: 40px; /* Increased height */
   font-weight: bold;
   background-color: #555;
-}
-
-.todo-list-button {
-  background-color: #555;
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin: 10px;
-  cursor: pointer;
-  border-radius: 5px;
 }
 
 .overlay {
