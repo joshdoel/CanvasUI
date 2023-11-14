@@ -6,7 +6,7 @@ import './App.css'; // Import the styles
 import Sidebar from './components/Sidebar';
 import Calendar from './components/Calendar';
 import ClassSelection from './components/ClassSelection';
-import Grades from './components/Grades'; // Import the Grades component
+import Grades from './components/Grades'; 
 import ChatBoxButton from './components/ChatBoxButton';
 import ZoomPage from './components/ZoomPage';
 import Syllabus from './components/Syllabus';
