@@ -19,12 +19,7 @@ const ClassCard = ({ classData, onCardClick }) => {
 const ClassSelection = ({ onClassSelect }) => {
   return (
     <div className="class-selection">
-      <h1>Class Selection</h1>
-      <div className="class-cards">
-        {classes.map((classData) => (
-          <ClassCard key={classData.id} classData={classData} onCardClick={onClassSelect} />
-        ))}
-      </div>
+      <h1>Welcome To Canvas</h1> 
     </div>
   );
 };

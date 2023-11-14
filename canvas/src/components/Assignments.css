@@ -6,7 +6,8 @@
     justify-content: flex-start;
     height: 100vh;
     width: 180vh;
-    background-color: #141b2d;;
+    background-color: #141b2d;
+    border: 1px solid #ccc;
   }
   
   .due-date {

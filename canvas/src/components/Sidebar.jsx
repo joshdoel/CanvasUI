@@ -45,7 +45,7 @@ const Sidebar = ({ onPageChange }) => {
           )}
         </li>
         <li onClick={() => handleDropdownClick(isSocialStudiesDropdownOpen, setSocialStudiesDropdownOpen)} className={isSocialStudiesDropdownOpen ? 'active' : ''}>
-          Social Studies
+          History
           {isSocialStudiesDropdownOpen && (
             <ul className="dropdown-list">
               <li onClick={() => handleItemClick('Math/Modules')}>Modules</li>
