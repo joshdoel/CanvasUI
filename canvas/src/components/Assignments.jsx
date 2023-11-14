@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Assignments.css';
 import MazePopup from './MazePopup';
 import SubmissionPopup from './SubmissionPopup';
-import ConfirmationPopup from './ConfirmationPopup';
+import ConfirmationPopup from './ConfirmationPopup.jsx';
 import HappySubmissionPopup from './HappySubmissionPopup';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDown, faCheck } from '@fortawesome/free-solid-svg-icons';
