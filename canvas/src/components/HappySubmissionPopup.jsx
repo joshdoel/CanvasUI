@@ -1,14 +1,11 @@
+// HappySubmissionPopup.jsx
 import React, { useState } from 'react';
-import './SubmissionPopup.css';
+import './HappySubmissionPopup.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFileAlt, faTrash } from '@fortawesome/free-solid-svg-icons';
+import { faFileAlt, faSmile } from '@fortawesome/free-solid-svg-icons';
 
-const SubmissionPopup = ({ onClose }) => {
+const HappySubmissionPopup = ({ onClose }) => {
   const [showSubmitMessage, setShowSubmitMessage] = useState(false);
-
-  const handleDragStart = (e) => {
-    e.dataTransfer.setData('text/plain', 'file-icon');
-  };
 
   const handleDragOver = (e) => {
     e.preventDefault();
@@ -31,7 +28,7 @@ const SubmissionPopup = ({ onClose }) => {
       // Show the submit message
       setShowSubmitMessage(true);
 
-      // Close the submission popup after a delay
+      // Close the happy submission popup after a delay
       setTimeout(() => {
         setShowSubmitMessage(false);
         onClose();
@@ -40,20 +37,20 @@ const SubmissionPopup = ({ onClose }) => {
   };
 
   return (
-    <div className="submission-popup" onDragOver={handleDragOver} onDrop={handleDrop}>
+    <div className="happy-submission-popup" onDragOver={handleDragOver} onDrop={handleDrop}>
       {showSubmitMessage && (
         <div className="submit-message">
           <h2>Assignment Submitted!</h2>
         </div>
       )}
-      <div className={`icon-container ${showSubmitMessage ? 'hide' : ''}`} draggable="true" onDragStart={handleDragStart}>
+      <div className={`icon-container ${showSubmitMessage ? 'hide' : ''}`} draggable="true" onDragStart={(e) => e.dataTransfer.setData('text/plain', 'file-icon')}>
         <FontAwesomeIcon icon={faFileAlt} className="icon" />
       </div>
-      <div className="icon-container">
-        <FontAwesomeIcon icon={faTrash} className="icon" />
+      <div className={`icon-container smiley-face ${showSubmitMessage ? 'hide' : ''}`}>
+        <FontAwesomeIcon icon={faSmile} className="icon" />
       </div>
     </div>
   );
 };
 
-export default SubmissionPopup;
+export default HappySubmissionPopup;

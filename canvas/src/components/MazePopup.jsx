@@ -195,14 +195,22 @@ const MazePopup = ({ onClose, onSolve }) => {
   };
 
   const handleSolveClick = () => {
-    setShowCongrats(true);
-    onSolve(); // You can keep this line if it has additional functionality
-  
-    // Set a timeout to simulate the download process
-    setTimeout(() => {
-      setShowCongrats(false); // Close the "Downloading Now" message
-      onClose(); // Close the entire popup
-    }, 1000);
+    if (failed) {
+      alert("You failed. Try again");
+      // Delay closing the popup after 2 seconds
+      setTimeout(() => {
+        onClose();
+      }, 2000);
+    } else {
+      setShowCongrats(true);
+      onSolve();
+
+      // Delay closing the popup after 1 second
+      setTimeout(() => {
+        setShowCongrats(false);
+        onClose();
+      }, 1000);
+    }
   };
 
   return (
@@ -218,6 +226,11 @@ const MazePopup = ({ onClose, onSolve }) => {
           <p>Downloading Now!</p>
         </div>
       ) : null}
+      {failed && (
+        <div className="failed-message">
+          <p>You failed! Try again!</p>
+        </div>
+      )}
       <canvas id="mazeCanvas" width="100" height="150" />
       <button className="close-button" onClick={onClose}>
         Close

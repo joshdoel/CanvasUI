@@ -65,6 +65,10 @@ body, html {
   height: 100vh;
   width: 170vh;
 }
+.calendar-weekday {
+  width: 198px;
+  column-gap: 100px;
+}
 
 .calendar-title {
   font-family: 'Arial', sans-serif; /* Use a professional font, replace with your desired font */
@@ -81,7 +85,8 @@ body, html {
 .calendar-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: 10px; /* Increased gap */
+  row-gap: 10px; /* Increased gap */
+  column-gap: 10px;
 }
 
 .calendar-day {
@@ -90,7 +95,7 @@ body, html {
   justify-content: center;
   align-items: center;
   height: 120px; /* Increased height */
-  width: 120px; /* Increased width */
+  width: 200px; /* Increased width */
   border-radius: 5px;
   background-color: #1f2941;
   cursor: pointer;
@@ -122,15 +127,6 @@ body, html {
   height: 40px; /* Increased height */
   font-weight: bold;
   background-color: #1f2941;
-}
-
-.todo-list-button {
-  background-color: #555;
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin: 10px;
-  cursor: pointer;
-  border-radius: 5px;
 }
 
 .overlay {

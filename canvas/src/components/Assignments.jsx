@@ -1,14 +1,17 @@
-// Assignments.jsx
 import React, { useState } from 'react';
 import './Assignments.css';
 import MazePopup from './MazePopup';
-import SubmissionPopup from './SubmissionPopup'; // Import the new component
+import SubmissionPopup from './SubmissionPopup';
+import ConfirmationPopup from './ConfirmationPopup';
+import HappySubmissionPopup from './HappySubmissionPopup';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDown, faCheck } from '@fortawesome/free-solid-svg-icons';
 
 const Assignments = () => {
   const [showMazePopup, setShowMazePopup] = useState(false);
-  const [showSubmissionPopup, setShowSubmissionPopup] = useState(false); // New state for SubmissionPopup
+  const [showSubmissionPopup, setShowSubmissionPopup] = useState(false);
+  const [showHappySubmissionPopup, setShowHappySubmissionPopup] = useState(false);
+  const [showConfirmationPopup, setShowConfirmationPopup] = useState(false);
 
   const handleDownload = () => {
     setShowMazePopup(true);
@@ -19,11 +22,25 @@ const Assignments = () => {
   };
 
   const handleSubmit = () => {
-    setShowSubmissionPopup(true); // Show the SubmissionPopup
+    setShowConfirmationPopup(true);
+  };
+
+  const handleConfirmSubmission = () => {
+    setShowConfirmationPopup(false);
+    setShowHappySubmissionPopup(true);
+  };
+
+  const handleCancelSubmission = () => {
+    setShowConfirmationPopup(false);
+    setShowSubmissionPopup(true);
   };
 
   const handleCloseSubmissionPopup = () => {
-    setShowSubmissionPopup(false); // Close the SubmissionPopup
+    setShowSubmissionPopup(false);
+  };
+
+  const handleCloseHappySubmissionPopup = () => {
+    setShowHappySubmissionPopup(false);
   };
 
   const handleMazeSolve = () => {
@@ -32,17 +49,18 @@ const Assignments = () => {
 
   return (
     <div className="assignments-container">
+      {/* ... (existing code) */}
       <div className="assignment-section">
-        <h2>Homework</h2>
+        <h2>Labs</h2>
         <ul>
           <li>
-            Assignment 1
-            <span className="due-date">Due: October 15, 2023</span>
-            <button onClick={() => handleDownload('Assignment 1')} className="download-button">
+            Lab 1
+            <span className="due-date">Due: October 8, 2023</span>
+            <button onClick={() => handleDownload('Lab 1')} className="download-button">
               <FontAwesomeIcon icon={faArrowDown} />
             </button>
             <button onClick={handleSubmit} className="submit-button">
-              <FontAwesomeIcon icon={faCheck} />
+              Submit
             </button>
           </li>
         </ul>
@@ -80,7 +98,7 @@ const Assignments = () => {
               <FontAwesomeIcon icon={faArrowDown} />
             </button>
             <button onClick={handleSubmit} className="submit-button">
-              <FontAwesomeIcon icon={faCheck} />
+              Submit
             </button>
           </li>
         </ul>
@@ -88,6 +106,13 @@ const Assignments = () => {
 
       {showMazePopup && <MazePopup onClose={handleCloseMazePopup} onSolve={handleMazeSolve} />}
       {showSubmissionPopup && <SubmissionPopup onClose={handleCloseSubmissionPopup} />}
+      {showHappySubmissionPopup && <HappySubmissionPopup onClose={handleCloseHappySubmissionPopup} />}
+      {showConfirmationPopup && (
+        <ConfirmationPopup
+          onConfirm={handleConfirmSubmission}
+          onCancel={handleCancelSubmission}
+        />
+      )}
     </div>
   );
 };
