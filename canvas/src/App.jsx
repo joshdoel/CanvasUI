@@ -6,6 +6,7 @@ import './App.css'; // Import the styles
 import Sidebar from './components/Sidebar';
 import Calendar from './components/Calendar';
 import ClassSelection from './components/ClassSelection';
+import Grades from './components/Grades'; // Import the Grades component
 import ChatBoxButton from './components/ChatBoxButton';
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
       <main className="content">
         {currentPage === 'classSelection' && <ClassSelection />}
         {currentPage === 'calendar' && <Calendar />}
+        {currentPage === 'grades' && <Grades />} {/* Add the Grades component */}
         {showChatBox && <div className="chat-box">{/* Chat box content */}</div>}
         <ChatBoxButton onChatBoxToggle={handleChatBoxToggle} />
       </main>
