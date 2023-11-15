@@ -17,7 +17,7 @@ const DirectionsPopup = ({ onClose }) => {
   return (
     <div className={`directions-popup${visible ? '' : ' hidden'}`}>
       <p>Follow the maze to the end.</p>
-      <p>Don't touch any black lines.</p>
+      <p>Don't touch any red lines.</p>
       <p>If you do, you won't be able to do your homework!</p>
     </div>
   );
