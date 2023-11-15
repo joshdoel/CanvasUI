@@ -51,11 +51,11 @@ const Assignments = () => {
     <div className="assignments-container">
       {/* ... (existing code) */}
       <div className="assignment-section">
-        <h2>Labs</h2>
+        <h2>Homework</h2>
         <ul>
           <li>
-            Lab 1
-            <span className="due-date">Due: October 8, 2023</span>
+            Homework 1
+            <span className="due-date">Due: October 21, 2023</span>
             <button onClick={() => handleDownload('Lab 1')} className="download-button">
               <FontAwesomeIcon icon={faArrowDown} />
             </button>
